@@ -16,7 +16,7 @@ app.get('/home.html', (req, res) => {
     res.setHeader('Content-Type', 'text/html');
 
     // Letting dev know connection was good
-    res.writeHead(200, console.log('Connection to home was good!'));
+    res.writeHead(200, console.log('Connection to home page was good!'));
 
     // Create a readstream to my homepage
     // And pipe it to the response for the user to see.
@@ -31,7 +31,7 @@ app.get('/about.html', (req, res) => {
   try {
   res.setHeader('Content-Type', 'text/html');
   // Letting dev know connection was good
-  res.writeHead(200, console.log('Connection to home was good!'));
+  res.writeHead(200, console.log('Connection to about page was good!'));
 
   const read = createReadStream(path.join(__dirname, 'about.html'));
   read.pipe(res);
@@ -45,7 +45,7 @@ app.get('/contact.html', (req, res) => {
   try {
   res.setHeader('Content-Type', 'text/html');
   // Letting dev know connection was good
-  res.writeHead(200, console.log('Connection to home was good!'));
+  res.writeHead(200, console.log('Connection to contact page was good!'));
 
   const read = createReadStream(path.join(__dirname, 'contact.html'));
   read.pipe(res);

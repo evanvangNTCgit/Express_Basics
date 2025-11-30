@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 // These are my routes for if the user does not wish to use the button
 // Or they want a quick link to a desired page instead of navigating the home page.
-app.get('/home', (req, res) => {
+app.get('/home.html', (req, res) => {
   try {
     // Set the header content to html.
     res.setHeader('Content-Type', 'text/html');
@@ -27,7 +27,7 @@ app.get('/home', (req, res) => {
   }
 });
 
-app.get('/about', (req, res) => {
+app.get('/about.html', (req, res) => {
   try {
   res.setHeader('Content-Type', 'text/html');
   // Letting dev know connection was good
@@ -41,7 +41,7 @@ app.get('/about', (req, res) => {
   }
 });
 
-app.get('/contact', (req, res) => {
+app.get('/contact.html', (req, res) => {
   try {
   res.setHeader('Content-Type', 'text/html');
   // Letting dev know connection was good
